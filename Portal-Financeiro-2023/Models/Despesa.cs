@@ -16,9 +16,11 @@ namespace Portal_Financeiro_2023.Models
 
         public decimal Valor { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório informar a data de vencimento!")]
         public DateTime Vencimento { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar a situação!")]
+        [Display(Name = "Situação")]
         public String Status { get; set; }
     }
 }
